@@ -329,13 +329,12 @@
 						<span class="position">Adastra</span>
 						<p class="mt-4">Adastra, a company dedicated for providing data driven solutions and consultation. 
 							<ul>
-								<li>Designed and implemented a scalable Retrieval-Augmented Generation (RAG) pipeline by indexing hierarchical patent documents into OpenSearch with hybrid search (BM25 + vector KNN using FAISS/HNSW), enabling context-aware LLM responses through AWS Bedrock and improving semantic search relevance.</li>
-								<li>Integrated Amazon Neptune knowledge graph into the RAG pipeline by modelling patent ontology (Patents, Assignees, CPC codes, Citation chains, Patent Families) using Gremlin queries with IAM SigV4 authentication, enabling graph-aware pre-retrieval scoping and post-retrieval enrichment to improve answer accuracy and contextual depth.</li>
-								<li>Implemented infrastructure on AWS including Glue Crawlers, Athena, Terraform and storage pipelines to support scalable data querying and dashboard KPIs.</li>
-								<li>Built automated data pipelines by extracting patent datasets from the USPTO API and Google BigQuery, transforming JSON data into AWS Athena-compatible formats and enabling large-scale analytics.</li>
-								<li>Optimized OCR pipelines by 60% speed latency to improve extraction accuracy of text, tables, and images from structured and unstructured documents.</li>
-								<li>Developed GenAI features using prompt engineering and AWS Bedrock models, improving chatbot response quality and logging feedback for iterative model tuning.</li>
-								<li>Lead and presented in client meetings and client discussions.</li>
+								<li>Architected a production RAG pipeline for hierarchical patent retrieval, indexing approx 25000 patents into OpenSearch with hybrid BM25 + FAISS-HNSW vector search, served via AWS Bedrock; improved retrieval relevance over baseline keyword search and became the core retrieval layer for downstream client-facing reserach tools.</li>
+								<li>Integrated an Amazon Neptune knowledge graph into the RAG pipeline by modelling patent ontology (Patents, Assignees, CPC codes, Citation chains, Patent Families) using Gremlin queries with IAM SigV4 authentication, enabling graph-aware pre-retrieval scoping and post-retrieval enrichment, increasing answer precision on multi-hop patent questions where pure vector retreival failed.</li>
+								<li>Built end-to-end ingestion pipelines from USPTO and Google BigQuery into Athena-queryable formats using AWS Glue, Step Functions and Terraform-managed infrastructure, replacing manual data refreshes and enabling reproducible, versioned deployments across environments.</li>
+								<li>Optimized OCR extraction latency by 60% to fasten extraction accuracy of text, tables and images from structured and unstructured documents.</li>
+								<li>Shipped Bedrock-based GenAI features with structured prompt templates and closed-loop feedback logging, improving response quality across iteration cycles.</li>
+								<li>Owned client-facing technical discussions: scoped requirements, presented architecture decisions.</li>
 							</ul>
 						</p>
 					</div>
@@ -348,9 +347,8 @@
 						<span class="position">Heart It Out</span>
 						<p class="mt-4">Heart It Out, a company dedicated for making mental healthcare accessible to all over the world. 
 							<ul>
-								<li>Designed and deployed 90+ ETL pipelines using n8n to ingest data from multiple sources and route user-generated data to multiple destinations like PostgreSQL, AWS etc.</li>
-								<li>Designed and managed data workflows for reliable data ingestion, improving data availability for analytics and internal tools.</li>
-								<li>Implemented workflow automation and monitoring to streamline data processing and reduce manual intervention.</li>
+								<li>Built and deployed 90+ n8n workflows orchestrating data ingestion from web, app and third-party sources into PostgrSQL and AWS storage layers, replacing manual data movement and increasing data availability for analytics and product teams.</li>
+								<li>Designed retry, monitoring and alerting logic across ingestion workflows, reducing pipeline failures and manual intervention required from the data team.</li>
 							</ul>
 						</p>
 					</div>
@@ -430,7 +428,7 @@
               <div class="text mt-3 float-right d-block">
 
                 <h3 class="heading"><a href="https://github.com/d01mittal/TripGenie-AI">TripGenie AI</a></h3>
-                <p>Developed an AI-powered Multi-Agent Trip Planner using LangGraph, Gemini API, Tavily, Wikipedia to generate personalized itineraries with real-time flights, hotels, weather and activities; integrated Streamlit UI, PDF export, for end-to-end trip planning</p>
+                <p>Designed a multi-agent trip planner using LangGraph orchestrating Gemini, Tavily search and Wikipedia tools to generate personalized itineraries with real-time flights, hotels, weather and activities. Implemented tool-calling, structured output parsing and inter-agent message routing, handling failure cases. Integrated Streamlit UI, PDF export for end-to-end trip planning.</p>
               </div>
             </div>
           </div>
@@ -452,7 +450,7 @@
               <div class="text mt-3 float-right d-block">
 
                 <h3 class="heading"><a href="https://github.com/d01mittal/CodeLens-AI">CodeLens AI</a></h3>
-                <p>Designed a Flask-based code analysis app, integrating logic flow with LangChain to detect inefficiencies and style violations; applied few-shot chain-of-thought prompting, improving developer review speed by 40%.</p>
+                <p>Built a Flask-based code analysis service using Langchain orchestrating OpenAI with few-shot chain-of-thought prompting to detect inefficiencies and style violations across multi-file Python codebases.</p>
               </div>
             </div>
           </div>
